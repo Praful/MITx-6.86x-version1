@@ -18,10 +18,12 @@ import mstep_test_input_3
 class TestEMAlgorithm(unittest.TestCase):
     #  Uncomment to skip test; add line to other tests if you want to skip them
     #  @unittest.skip('Skip this test')
+    def setUp(self):
+        self.X = np.loadtxt("toy_data.txt")
+
     def test_estep_toy_dataset(self):
-        X = np.loadtxt("toy_data.txt")
-        mixture, post = common.init(X, 3, 0)
-        post, ll = naive_em.estep(X, mixture)
+        mixture, post = common.init(self.X, 3, 0)
+        post, ll = naive_em.estep(self.X, mixture)
         self.assertEqual(np.isclose(ll, -1388.0818), True)
 
 
@@ -52,6 +54,17 @@ class TestEMAlgorithm(unittest.TestCase):
     def test_mstep_input_3(self):
         self.run_mstep_test_input(mstep_test_input_3)
 
+    def run_full_em(self, X, K, seed, expected_cost):
+        mixture, post = common.init(X, K, seed)
+        new_mixture, soft_counts, cost = naive_em.run(X, mixture, post)
+        #  print(f'{K=}, {seed=}, {cost}')
+        self.assertEqual(np.isclose(cost, expected_cost), True)
+
+    def test_run_all(self):
+        self.run_full_em(self.X, 5, 5, -1138.20583436)
+        self.run_full_em(self.X, 3, 7, -1138.89094162)
+        self.run_full_em(self.X, 2, 6, -1175.71487887)
+        self.run_full_em(self.X, 1, 6, -1307.22343176)
 
 if __name__ == '__main__':
     unittest.main()

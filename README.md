@@ -5,16 +5,23 @@ Shareable files for the MIT course [Machine Learning with Python - From Linear M
 
 ### 3. Expectation–maximization algorithm
 
-The tests in `test_3_em_algorithm.py` use input and output from my submissions on the course for this section. These are used to check your results. Tests exist for the original toy dataset, the `estep` and the `mstep`.
+The tests in `test_3_em_algorithm.py` use input and output from my submissions on the course for this section. These are used to check your results. Tests exist for the original toy dataset, and the `estep`, `mstep`, and `run` functions.
 
-I could not work out how to create a test for the `run()`. If you have, please let me know and I'll update the code.
+I tested and developed these on Windows 10. Obviously, I can't guarantee that these 
+will work on your computer.
 
 Instructions
 
 1. Put all files in the same folder (`netflix`) as `naive_em.py`. 
-2. To run
+2. To run, enter in a console:
 ```
 python test_3_em_algorithm.py
 ```
 
 The other files (`*test_input*.py`) contain the input and output test data. 
+
+If you don't want to run a particular test, you can either comment out the whole test 
+or add the following above the function definition:
+```
+@unittest.skip('Skip this test')
+```
