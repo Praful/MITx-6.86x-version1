@@ -1,5 +1,5 @@
 # MITx-6.86x-version1
-Shareable files for the MIT course [Machine Learning with Python - From Linear Models to Deep Learning](https://courses.edx.org/courses/course-v1:MITx+6.86x+1T2020/course/).
+Shareable files for the MIT course [Machine Learning with Python - From Linear Models to Deep Learning](https://courses.edx.org/courses/course-v1:MITx+6.86x+1T2020/course/). The course took place from Feb to May 2020.
 
 ## Project 4: Collaborative Filtering via Gaussian Mixtures
 
