@@ -7,6 +7,8 @@ Shareable files for the MIT course [Machine Learning with Python - From Linear M
 
 The tests in `test_3_em_algorithm.py` use input and output from my submissions on the course for this section. These are used to check your results. Tests exist for the original toy dataset, and the `estep`, `mstep`, and `run` functions.
 
+I've also added tests for the BIC function, which is in part 5.
+
 I tested and developed these on Windows 10. Obviously, I can't guarantee that these 
 will work on your computer.
 
