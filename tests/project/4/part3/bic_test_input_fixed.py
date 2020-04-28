@@ -31,10 +31,10 @@ var = np.array([0.10038354, 0.07227467, 0.13240693, 0.12411825, 0.10497521, 0.12
 
 p = np.array([0.1680912,  0.15835331, 0.21384187, 0.14223565, 0.14295074, 0.17452722])
 
-LL = -1648.257885
+ll = -1648.257885
 
 #Output
 bix = -1679.400462
 
 def data():
-    return X, common.GaussianMixture(mu, var, p), LL, bix
+    return X, common.GaussianMixture(mu, var, p), ll, bix
