@@ -37,3 +37,12 @@ python test_7_em_matrix_completion.py
 ```
 
 The other files (`*test_input*.py`) contain the input and output test data. 
+
+## Project 5: Text-based game
+### 3. Q-learning algorithm
+The tests in `test.py` use input from `q_func.npy` (a previously saved `q_func` array) to test functions `tabular_q_learning()` and `epsilon_greedy()` in `agent_tabular_ql.py`. 
+
+Save the files in the same folder as `agent_tabular_ql.py` and run:
+```
+python test.py
+```
